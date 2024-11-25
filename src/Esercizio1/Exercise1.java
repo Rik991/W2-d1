@@ -1,5 +1,6 @@
 package Esercizio1;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exercise1 {
@@ -33,13 +34,13 @@ public class Exercise1 {
                 } else {
                     throw new numeroMaggioreDieci("Numero troppo grande");
                 }
-            } catch (Exception e) {
+            } catch (numeroMaggioreDieci e) {
                 System.out.println(e);
-                System.out.println("Input non valido! Inserisci solo numeri interi tra 1 e 10.");
                 scanner.nextLine(); // Ripulisce il buffer dello scanner
+            } catch (InputMismatchException e) {
+                System.out.println("Input non valido! Inserisci solo numeri interi tra 1 e 10.");
+                scanner.nextLine();
             }
-
         }
-
     }
 }
