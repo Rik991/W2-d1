@@ -7,13 +7,11 @@ import java.util.Scanner;
 
 public class Exercise2 {
 
-
-
-    public static double calcolaKmLitro(int numeroKm, int litriConsumati) {
+    public static void calcolaKmLitro(int numeroKm, int litriConsumati) {
         double kmPerLitro = numeroKm / litriConsumati;
         System.out.println("Hai percorso " + numeroKm + " kilometri consumando " + litriConsumati +
                 " litri, la tua macchina fa " + kmPerLitro + " km/l");
-        return kmPerLitro;
+
     }
 
     public static void main(String[] args) {
@@ -34,7 +32,5 @@ public class Exercise2 {
            // System.out.println(e); //catch normale
             LOGGER.error(e.getMessage()); // catch con LogBack
         }
-
     }
-
 }
